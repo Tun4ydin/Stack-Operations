@@ -351,4 +351,8 @@ int main()
     {
         cout << "Error: " << e.what() << endl;
     }
+    catch(const invalid_argument& e)
+    {
+        cout << "Error: " << e.what() << endl;
+    }
 }
