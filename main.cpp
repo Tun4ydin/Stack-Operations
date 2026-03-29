@@ -140,9 +140,9 @@ int binaryToDecimal(char binString[])
     StackArray<int> s;
     for(int i = 0; binString[i] != '\0'; i++)
     {
-        if(binString[i] != '1' || binString[i] != '0')
+        if(binString[i] != '1' && binString[i] != '0')
         {
-            throw out_of_range("Binary numbers can only contain 1's or 0's");
+            throw invalid_argument("Binary number can not contain anything other than 1's or 0's");
         }
         s.push(i);
     }
